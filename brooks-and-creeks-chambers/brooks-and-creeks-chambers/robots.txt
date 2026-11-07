@@ -1,0 +1,6 @@
+# robots.txt – Brooks and Creeks Chambers
+# Replace the domain below with your live domain
+User-agent: *
+Allow: /
+
+Sitemap: https://www.brooksandcreekschambers.com.ng/sitemap.xml
