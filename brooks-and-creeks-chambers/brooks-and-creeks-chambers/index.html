@@ -297,12 +297,8 @@
           <div class="contact-form-wrap reveal">
             <h3>Consultation Enquiry Form</h3>
             <!--
-              FORM BACKEND: This form is connected to Formspree (https://formspree.io).
-              1. Create a free account and a new form at https://formspree.io
-              2. Replace YOUR_FORM_ID below with your form's endpoint ID, e.g.
-                 action="https://formspree.io/f/xabcd123"
-              3. In your Formspree dashboard, set the notification email to receive enquiries.
-              Until configured, submissions cannot be delivered — see README.md.
+              FORM BACKEND: Connected to Formspree (form ID: maeezjnk).
+              Submissions are emailed to the address set in the Formspree dashboard.
             -->
             <form id="enquiryForm" action="https://formspree.io/f/maeezjnk" method="POST" novalidate>
               <div class="form-row">
@@ -335,6 +331,7 @@
                 <label for="message">Description of Enquiry <span class="req" aria-hidden="true">*</span></label>
                 <textarea id="message" name="message" rows="5" required placeholder="Briefly describe your enquiry…"></textarea>
               </div>
+              <input type="hidden" name="_subject" value="New consultation enquiry — Brooks &amp; Creeks Chambers website">
               <input type="text" name="_gotcha" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
               <button type="submit" class="btn btn-gold btn-block" id="submitBtn">Submit Enquiry</button>
               <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>

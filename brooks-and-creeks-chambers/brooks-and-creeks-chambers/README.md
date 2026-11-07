@@ -29,24 +29,14 @@ brooks-and-creeks-chambers/
 
 ---
 
-## 1. Configure the Enquiry Form (REQUIRED)
+## 1. Enquiry Form
 
-The form uses **Formspree** (free tier available). To activate real submissions:
+The form is connected to **Formspree** at `https://formspree.io/f/maeezjnk`
+(set as the form's `action` in `index.html`). Submissions are sent via `fetch`
+from `js/main.js` and delivered to the notification email configured in the
+Formspree dashboard. To change the destination, update the `action` URL.
 
-1. Go to <https://formspree.io> and create a free account.
-2. Create a **new form** and copy its endpoint ID (e.g. `xabcd123`).
-3. Open `index.html` and find this line inside the form:
-
-   ```html
-   <form id="enquiryForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
-   ```
-
-4. Replace `YOUR_FORM_ID` with your actual ID:
-   `action="https://formspree.io/f/xabcd123"`
-5. In the Formspree dashboard, set the **notification email** to the address where
-   enquiries should be delivered.
-
-Until this is done, the form shows a clear notice instead of silently failing
+If the `action` is ever reset to the `YOUR_FORM_ID` placeholder, the form shows a clear notice instead of silently failing
 (no fake submissions are created). A honeypot field (`_gotcha`) filters spam bots.
 
 > Alternative backends: swap the `action` for a Web3Forms access key
